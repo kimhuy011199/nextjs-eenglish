@@ -32,7 +32,7 @@ export const getVocabularies = async (lessonHandle: string) => {
       definition: 'the air in a particular place',
       meaning: 'bầu không khí',
       partOfSpeech: PartOfSpeech.Noun,
-      imgSrc: '/cat/practice.svg',
+      imgSrc: '/cat/flashcards.svg',
       phonetic: {
         id: '2',
         vocabularyId: '111',
@@ -55,7 +55,7 @@ export const getVocabularies = async (lessonHandle: string) => {
         'a toy consisting of a light frame with thin material stretched over it',
       meaning: 'diều',
       partOfSpeech: PartOfSpeech.Noun,
-      imgSrc: '/cat/quiz.svg',
+      imgSrc: '/cat/flashcards.svg',
       phonetic: {
         id: '3',
         vocabularyId: '112',
@@ -78,7 +78,7 @@ export const getVocabularies = async (lessonHandle: string) => {
         'to come near or nearer to something or someone in space, time, quality, or amount',
       meaning: 'tiếp cận',
       partOfSpeech: PartOfSpeech.Verb,
-      imgSrc: '/cat/vocabulary.svg',
+      imgSrc: '/cat/flashcards.svg',
       phonetic: {
         id: '4',
         vocabularyId: '113',

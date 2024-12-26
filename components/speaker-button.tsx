@@ -19,7 +19,7 @@ export function SpeakerButton({
     <Button
       onClick={playSound}
       className={twMerge(
-        'p-2 text-lg rounded-full bg-primary text-white h-14 w-14 flex justify-center items-center [&_svg]:size-6',
+        'p-2 text-lg rounded-full bg-primary text-white h-14 w-14 flex justify-center items-center [&_svg]:size-6 hover:scale-105 transition-all',
         className
       )}
     >

@@ -38,11 +38,11 @@ export function FlashcardSlider({
 
   return (
     <div className='mx-auto flex flex-col items-center justify-center gap-4 w-[800px]'>
-      <div className='relative h-80 w-full'>
+      <div className='flex flex-col items-center justify-center relative h-80 w-full'>
         <AnimatePresence custom={direction} initial={false}>
           <motion.div
             key={currentPage}
-            className='absolute inset-0'
+            className='absolute inset-0 flex flex-col items-center justify-center'
             data-page={currentPage}
             variants={variants}
             initial='enter'

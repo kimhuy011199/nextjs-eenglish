@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { Vocabulary } from '@/lib/interfaces';
 import { FlashcardFace1 } from '@/components/flashcard-face-1';
+import { FlashcardFace2 } from '@/components/flashcard-face-2';
+import { FlashcardFace3 } from '@/components/flashcard-face-3';
 
 export function useFlashcard(vocabulary: Vocabulary) {
   const tabs = [
@@ -10,11 +12,11 @@ export function useFlashcard(vocabulary: Vocabulary) {
     },
     {
       id: 2,
-      component: <p>{vocabulary.definition}</p>,
+      component: <FlashcardFace2 vocabulary={vocabulary} />,
     },
     {
       id: 3,
-      component: <p>{vocabulary.id}</p>,
+      component: <FlashcardFace3 vocabulary={vocabulary} />,
     },
   ];
   const [selectedTab, setSelectedTab] = useState(tabs[0]);

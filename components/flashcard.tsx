@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { AnimatePresence } from 'motion/react';
 import { RefreshCw } from 'lucide-react';
 import * as motion from 'motion/react-client';
@@ -11,7 +12,7 @@ export function Flashcard({ vocabulary }: { vocabulary: Vocabulary }) {
   const { selectedTab, handleNextTab } = useFlashcard(vocabulary);
 
   return (
-    <div className='border border-zinc-200 p-6 w-full rounded-xl relative flex items-center'>
+    <div className='border border-zinc-200 p-6 w-full rounded-2xl relative flex items-center'>
       <Button
         onClick={handleNextTab}
         variant='outline'
@@ -29,7 +30,17 @@ export function Flashcard({ vocabulary }: { vocabulary: Vocabulary }) {
             transition={{ duration: 0.2 }}
             className='flex items-center'
           >
-            {selectedTab.component}
+            <div className='flex gap-10 items-center p-4'>
+              <div className='min-w-48 h-48 rounded-xl border border-zinc-200'>
+                <Image
+                  src={vocabulary.imgSrc}
+                  alt={vocabulary.word}
+                  width={192}
+                  height={192}
+                />
+              </div>
+              {selectedTab.component}
+            </div>
           </motion.div>
         </AnimatePresence>
       </div>
