@@ -3,7 +3,7 @@
 import * as React from 'react';
 import { SwatchBook, Headphones } from 'lucide-react';
 
-import { NavMain } from '@/app/learn/[id]/_components/nav-main';
+import { NavMain } from '@/app/learn/[handle]/_components/nav-main';
 import {
   Sidebar,
   SidebarContent,

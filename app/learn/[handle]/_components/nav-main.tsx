@@ -1,7 +1,8 @@
 'use client';
 
+import Link from 'next/link';
 import { ChevronRight, type LucideIcon } from 'lucide-react';
-import { useParams } from 'next/navigation';
+import { useParams, usePathname } from 'next/navigation';
 
 import {
   Collapsible,
@@ -34,7 +35,9 @@ export function NavMain({
   }[];
 }) {
   const params = useParams();
-  const { id } = params;
+  const pathname = usePathname();
+  const { handle } = params;
+  const currentPath = pathname.split('/').pop();
 
   return (
     <SidebarGroup>
@@ -60,9 +63,16 @@ export function NavMain({
                   {item.items?.map((subItem) => (
                     <SidebarMenuSubItem key={subItem.title}>
                       <SidebarMenuSubButton asChild>
-                        <a href={`/learn/${id}/${subItem.url}`}>
+                        <Link
+                          href={`/learn/${handle}/${subItem.url}`}
+                          className={
+                            subItem.url === currentPath
+                              ? '!text-primary !font-medium'
+                              : ''
+                          }
+                        >
                           <span>{subItem.title}</span>
-                        </a>
+                        </Link>
                       </SidebarMenuSubButton>
                     </SidebarMenuSubItem>
                   ))}

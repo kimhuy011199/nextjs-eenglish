@@ -1,17 +1,18 @@
 import { SidebarInset, SidebarProvider } from '@/components/ui/sidebar';
-import { LessonSidebar } from '@/app/learn/[id]/_components/lesson-sidebar';
-import { BreadcrumbHeader } from '@/app/learn/[id]/_components/breadcrumb-header';
+import { LessonSidebar } from '@/app/learn/[handle]/_components/lesson-sidebar';
 
 export default function Layout({
   children,
+  breadcrumb,
 }: Readonly<{
   children: React.ReactNode;
+  breadcrumb: React.ReactNode;
 }>) {
   return (
     <SidebarProvider>
       <LessonSidebar />
       <SidebarInset>
-        <BreadcrumbHeader />
+        {breadcrumb}
         <div className='flex flex-1 flex-col gap-4 p-5 pt-0'>{children}</div>
       </SidebarInset>
     </SidebarProvider>
