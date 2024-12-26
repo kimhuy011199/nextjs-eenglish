@@ -1,31 +1,47 @@
 'use client';
 
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { CardQuestionAnswer } from '@/components/card-question-answer';
-import { Question } from '@/lib/interfaces';
-import { questions as importedQuestions } from '@/lib/constants';
+import { Question, Vocabulary } from '@/lib/interfaces';
+import { DELAY_NEXT_QUESTION } from '@/lib/constants';
+import { generatePracticeQuestion } from '@/lib/utils';
 
-export function PracticeQuestion() {
-  // From the raw word => Convert them to question
-  const questions = importedQuestions as Question[];
-  const [question, setQuestion] = useState(questions[0]);
-
+export function PracticeQuestion({
+  vocabularies,
+}: {
+  vocabularies: Vocabulary[];
+}) {
+  const [question, setQuestion] = useState<Question | undefined>(undefined);
   const [userAnswer, setUserAnswer] = useState('');
 
   const handleUserAnswer = (value: string) => {
+    if (!question) {
+      return;
+    }
     setUserAnswer(value);
     if (value === question.answerContent.correctAnswer) {
       setTimeout(() => {
-        setQuestion(questions[1]);
+        const newQuestion = generatePracticeQuestion(vocabularies);
+        setQuestion(newQuestion);
         setUserAnswer('');
-      }, 1000);
+      }, DELAY_NEXT_QUESTION);
     } else {
       setTimeout(() => {
-        setQuestion(questions[5]);
+        const newQuestion = generatePracticeQuestion(vocabularies);
+        setQuestion(newQuestion);
         setUserAnswer('');
-      }, 1000);
+      }, DELAY_NEXT_QUESTION);
     }
   };
+
+  useEffect(() => {
+    const newQuestion = generatePracticeQuestion(vocabularies);
+    setQuestion(newQuestion);
+  }, []);
+
+  if (!question) {
+    return null;
+  }
 
   return (
     <div className='max-w-2xl mx-auto'>

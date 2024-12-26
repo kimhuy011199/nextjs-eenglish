@@ -16,6 +16,7 @@ export interface AnswerChoice {
 export interface AnswerContent {
   type: AnswerContentType;
   value: AnswerChoice[] | string;
+  language: Language;
   correctAnswer: string;
 }
 

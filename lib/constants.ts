@@ -1,5 +1,3 @@
-export const words = [];
-
 export const questions = [
   {
     questionContent: {
@@ -158,3 +156,5 @@ export const questions = [
     },
   },
 ];
+
+export const DELAY_NEXT_QUESTION = 1000;

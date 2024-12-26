@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import { twMerge } from 'tailwind-merge';
 import { Check } from 'lucide-react';
 import {
   AnswerChoice as AnswerChoiceType,
@@ -9,7 +10,7 @@ import {
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { AnswerContentType } from '@/lib/enums';
-import { twMerge } from 'tailwind-merge';
+import { DELAY_NEXT_QUESTION } from '@/lib/constants';
 
 export function AnswerInput({
   answerContent,
@@ -29,19 +30,32 @@ export function AnswerInput({
     } else {
       setCurrentStatus('incorrect');
     }
+    setTimeout(() => {
+      setCurrentStatus('');
+      setInput('');
+    }, DELAY_NEXT_QUESTION);
   };
 
   return (
     <div className='flex items-center gap-3'>
       <Input
         placeholder='Enter your answer'
-        className={twMerge('h-12 !text-lg px-4')}
+        className={twMerge(
+          'h-12 !text-lg px-4',
+          currentStatus === 'correct' && 'border-green-500',
+          currentStatus === 'incorrect' && 'border-red-500'
+        )}
         autoFocus
         value={input}
         onChange={(e) => setInput(e.target.value)}
-        onKeyDown={handleSubmit}
+        disabled={!!currentStatus}
+        // onKeyDown={() => handleSubmit}
       />
-      <Button className='h-12 [&_svg]:size-5' onClick={handleSubmit}>
+      <Button
+        className='h-12 [&_svg]:size-5'
+        onClick={handleSubmit}
+        disabled={!!currentStatus}
+      >
         <Check size={40} strokeWidth={3} />
       </Button>
     </div>

@@ -94,5 +94,27 @@ export const getVocabularies = async (lessonHandle: string) => {
         audioSrc: '',
       },
     },
+    {
+      id: '114',
+      word: 'hello',
+      definition: 'used when meeting or greeting someone',
+      meaning: 'xin chào',
+      partOfSpeech: PartOfSpeech.Interjection,
+      imgSrc: '/cat/flashcards.svg',
+      phonetic: {
+        id: '5',
+        vocabularyId: '114',
+        text: '/həˈloʊ/',
+        sound:
+          'https://api.dictionaryapi.dev/media/pronunciations/en/hello-us.mp3',
+      },
+      sentence: {
+        id: '5',
+        vocabularyId: '114',
+        sentence: 'Hello, how are you?',
+        translation: 'Xin chào, bạn khỏe không?',
+        audioSrc: '',
+      },
+    },
   ];
 };
