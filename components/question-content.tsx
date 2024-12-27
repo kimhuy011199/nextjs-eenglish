@@ -12,8 +12,7 @@ export function QuestionContent({
       <p className='text-zinc-500'>{questionContent.description}</p>
       <div className='pt-8 pb-4'>
         {questionContent.type === QuestionContentType.Text ||
-        questionContent.type === QuestionContentType.Meaning ||
-        questionContent.type === QuestionContentType.Blank ? (
+        questionContent.type === QuestionContentType.Meaning ? (
           <p className='text-3xl font-semibold text-center px-4'>
             {questionContent.value}
           </p>

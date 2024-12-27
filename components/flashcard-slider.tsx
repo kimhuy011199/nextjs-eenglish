@@ -53,7 +53,7 @@ export function FlashcardSlider({
           </motion.div>
         </AnimatePresence>
       </div>
-      <div className='flex justify-between w-full'>
+      <div className='flex justify-center gap-5 w-full'>
         <Button
           variant='outline'
           className='h-10 w-10 [&_svg]:size-4 rounded-lg'

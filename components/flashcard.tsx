@@ -12,7 +12,7 @@ export function Flashcard({ vocabulary }: { vocabulary: Vocabulary }) {
   const { selectedTab, handleNextTab } = useFlashcard(vocabulary);
 
   return (
-    <div className='border border-zinc-200 p-6 w-full rounded-2xl relative flex items-center'>
+    <div className='border border-zinc-200 p-6 w-full rounded-2xl relative flex items-center shadow-lg'>
       <Button
         onClick={handleNextTab}
         variant='outline'

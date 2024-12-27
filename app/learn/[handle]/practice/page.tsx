@@ -10,7 +10,7 @@ export default async function Practice({
   const vocabularies = await getVocabularies(lessonHandle);
 
   return (
-    <div>
+    <div className='flex flex-col h-full justify-center items-center relative'>
       <PracticeQuestion vocabularies={vocabularies} />
     </div>
   );

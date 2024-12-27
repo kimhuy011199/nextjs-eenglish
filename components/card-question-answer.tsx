@@ -14,7 +14,7 @@ export function CardQuestionAnswer({
   shouldShowConfetti?: boolean;
 }) {
   return (
-    <div className='group w-full border border-zinc-200 rounded-xl flex flex-col divide-y'>
+    <div className='group w-full border border-zinc-200 rounded-2xl flex flex-col divide-y shadow-lg'>
       <div className='p-4'>
         <QuestionContent questionContent={question.questionContent} />
       </div>

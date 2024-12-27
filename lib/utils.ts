@@ -168,7 +168,7 @@ export const generatePracticeQuestion = (
 ) => {
   const vocab = getRandomItemFromArray(vocabularies);
   const question = generateQuestion(vocab, vocabularies, answerContentType);
-  return question;
+  return { vocabulary: vocab, question };
 };
 
 export const formatDurationTime = (time: number) => {

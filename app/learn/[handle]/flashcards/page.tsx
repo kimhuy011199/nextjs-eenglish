@@ -10,7 +10,7 @@ export default async function Flashcards({
   const vocabularies = await getVocabularies(lessonHandle);
 
   return (
-    <div className='pt-10'>
+    <div className='flex flex-col justify-center items-center h-full'>
       <FlashcardSlider vocabularies={vocabularies} />
     </div>
   );
