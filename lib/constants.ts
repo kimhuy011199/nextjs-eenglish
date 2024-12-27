@@ -157,4 +157,4 @@ export const questions = [
   },
 ];
 
-export const DELAY_NEXT_QUESTION = 1000;
+export const DELAY_NEXT_QUESTION = 1800;

@@ -6,10 +6,12 @@ export function CardQuestionAnswer({
   question,
   userAnswer,
   handleUserAnswer,
+  shouldShowConfetti = true,
 }: {
   question: Question;
   userAnswer: string;
   handleUserAnswer: (value: string) => void;
+  shouldShowConfetti?: boolean;
 }) {
   return (
     <div className='group w-full border border-zinc-200 rounded-xl flex flex-col divide-y'>
@@ -21,6 +23,7 @@ export function CardQuestionAnswer({
           answerContent={question.answerContent}
           userAnswer={userAnswer}
           handleUserAnswer={handleUserAnswer}
+          shouldShowConfetti={shouldShowConfetti}
         />
       </div>
     </div>

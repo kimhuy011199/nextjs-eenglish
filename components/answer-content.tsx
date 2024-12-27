@@ -7,10 +7,12 @@ export function AnswerContent({
   answerContent,
   userAnswer,
   handleUserAnswer,
+  shouldShowConfetti,
 }: {
   answerContent: AnswerContentInterface;
   userAnswer: string;
   handleUserAnswer: (value: string) => void;
+  shouldShowConfetti?: boolean;
 }) {
   return (
     <>
@@ -28,6 +30,7 @@ export function AnswerContent({
           answerContent={answerContent}
           userAnswer={userAnswer}
           handleUserAnswer={handleUserAnswer}
+          shouldShowConfetti={shouldShowConfetti}
         />
       ) : null}
     </>
