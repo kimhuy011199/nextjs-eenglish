@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import {
   Dialog,
   DialogContent,
+  DialogDescription,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -22,6 +23,7 @@ export function FlashcardModal({ vocabulary }: { vocabulary: Vocabulary }) {
       <DialogContent className='min-w-[800px] rounded-3xl'>
         <DialogHeader className='pb-2'>
           <DialogTitle>Flashcard</DialogTitle>
+          <DialogDescription></DialogDescription>
         </DialogHeader>
         <Flashcard vocabulary={vocabulary} />
       </DialogContent>

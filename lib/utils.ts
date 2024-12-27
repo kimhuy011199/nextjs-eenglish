@@ -28,22 +28,22 @@ export const generateAnswerChoices = (
 export const generateQuestion = (
   vocab: Vocabulary,
   vocabularies: Vocabulary[],
-  answerContentType?: AnswerContentType
+  answerContentTypes?: AnswerContentType[]
 ) => {
   let typesList: number[] = [];
-  if (answerContentType) {
-    if (answerContentType === AnswerContentType.Choice) {
+  if (answerContentTypes?.length === 1) {
+    if (answerContentTypes[0] === AnswerContentType.Choice) {
       typesList = [1, 2, 3];
     }
-    if (answerContentType === AnswerContentType.Input) {
+    if (answerContentTypes[0] === AnswerContentType.Input) {
       typesList = [4, 5, 6];
     }
   } else {
     typesList = [1, 2, 3, 4, 5, 6];
   }
 
-  // const type = getRandomItemFromArray(typesList);
-  const type = 1;
+  const type = getRandomItemFromArray(typesList);
+  // const type = 1;
 
   switch (type) {
     case 1:
@@ -164,10 +164,10 @@ export const shuffleArray = (array: any[]) => {
 
 export const generatePracticeQuestion = (
   vocabularies: Vocabulary[],
-  answerContentType?: AnswerContentType
+  answerContentTypes?: AnswerContentType[]
 ) => {
   const vocab = getRandomItemFromArray(vocabularies);
-  const question = generateQuestion(vocab, vocabularies, answerContentType);
+  const question = generateQuestion(vocab, vocabularies, answerContentTypes);
   return { vocabulary: vocab, question };
 };
 

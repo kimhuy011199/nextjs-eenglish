@@ -8,6 +8,8 @@ import { DELAY_NEXT_QUESTION } from '@/lib/constants';
 import { generatePracticeQuestion } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
 import { FlashcardModal } from '@/components/flashcard-modal';
+import { AnswerTypeModal } from '@/components/answer-type-modal';
+import { AnswerContentType } from '@/lib/enums';
 
 export function PracticeQuestion({
   vocabularies,
@@ -18,7 +20,19 @@ export function PracticeQuestion({
     { question: Question; vocabulary: Vocabulary } | undefined
   >(undefined);
   const [userAnswer, setUserAnswer] = useState('');
-  const [showActions, setShowActions] = useState(false);
+  const [answerContentTypes, setAnswerContentTypes] = useState([
+    AnswerContentType.Input,
+    AnswerContentType.Choice,
+  ]);
+
+  const handleNextQuestion = () => {
+    const newPracticeQuestion = generatePracticeQuestion(
+      vocabularies,
+      answerContentTypes
+    );
+    setPracticeQuestion(newPracticeQuestion);
+    setUserAnswer('');
+  };
 
   const handleUserAnswer = (value: string) => {
     if (!practiceQuestion) {
@@ -27,26 +41,14 @@ export function PracticeQuestion({
     setUserAnswer(value);
     if (value === practiceQuestion.question.answerContent.correctAnswer) {
       setTimeout(() => {
-        const newPracticeQuestion = generatePracticeQuestion(vocabularies);
-        setPracticeQuestion(newPracticeQuestion);
-        setUserAnswer('');
+        handleNextQuestion();
       }, DELAY_NEXT_QUESTION);
-    } else {
-      setShowActions(true);
     }
   };
 
-  const handleNextQuestion = () => {
-    const newPracticeQuestion = generatePracticeQuestion(vocabularies);
-    setPracticeQuestion(newPracticeQuestion);
-    setUserAnswer('');
-    setShowActions(false);
-  };
-
   useEffect(() => {
-    const newPracticeQuestion = generatePracticeQuestion(vocabularies);
-    setPracticeQuestion(newPracticeQuestion);
-  }, []);
+    handleNextQuestion();
+  }, [answerContentTypes]);
 
   if (!practiceQuestion) {
     return null;
@@ -54,7 +56,7 @@ export function PracticeQuestion({
 
   return (
     <>
-      <div className='max-w-2xl mx-auto w-full flex flex-col gap-4 relative pb-12'>
+      <div className='max-w-2xl mx-auto w-full flex flex-col gap-4 relative pb-16'>
         <CardQuestionAnswer
           question={practiceQuestion.question}
           userAnswer={userAnswer}
@@ -62,6 +64,10 @@ export function PracticeQuestion({
         />
       </div>
       <div className='flex justify-center gap-4 absolute bottom-0 right-0 left-0 pb-3'>
+        <AnswerTypeModal
+          answerContentTypes={answerContentTypes}
+          setAnswerContentTypes={setAnswerContentTypes}
+        />
         <FlashcardModal vocabulary={practiceQuestion.vocabulary} />
         <Button
           variant='outline'
