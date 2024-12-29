@@ -29,9 +29,9 @@ export function AnswerChoice({
     setShowConfetti(true);
     setTimeout(() => {
       setShowConfetti(false);
-      setTimeout(() => setShowConfetti(true), 200);
-      setTimeout(() => setShowConfetti(false), 400);
-    }, 200);
+      setTimeout(() => setShowConfetti(true), 150);
+      setTimeout(() => setShowConfetti(false), 300);
+    }, 150);
   };
 
   const handleClick = (choice: AnswerChoiceType) => {
