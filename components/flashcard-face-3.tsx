@@ -15,7 +15,9 @@ export function FlashcardFace3({ vocabulary }: { vocabulary: Vocabulary }) {
           className='h-8 w-8 [&_svg]:size-4'
           soundSource={vocabulary.phonetic.sound}
         />
-        <p className='text-zinc-500 font-medium'>{vocabulary.phonetic.text}</p>
+        <p className='text-zinc-500 font-medium font-phonetic'>
+          {vocabulary.phonetic.text}
+        </p>
       </div>
       <div className='flex items-center gap-4'>
         <SpeakerButton
@@ -24,7 +26,9 @@ export function FlashcardFace3({ vocabulary }: { vocabulary: Vocabulary }) {
         />
         <div>
           <p className='font-medium font-lg'>{vocabulary.sentence.sentence}</p>
-          <p className='text-zinc-500'>{vocabulary.sentence?.translation}</p>
+          <p className='text-zinc-500 font-vietnamese'>
+            {vocabulary.sentence?.translation}
+          </p>
         </div>
       </div>
     </div>

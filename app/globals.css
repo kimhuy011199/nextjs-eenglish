@@ -82,3 +82,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+@layer components {
+  /* Font for Vietnamese meaning */
+  .font-vietnamese {
+    font-family: var(--font-questrial);
+  }
+
+  /* Font for English meaning */
+  .font-phonetic {
+    font-family: var(--font-inter);
+  }
+}

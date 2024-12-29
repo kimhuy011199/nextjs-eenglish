@@ -1,5 +1,6 @@
+import { twMerge } from 'tailwind-merge';
 import { QuestionContent as QuestionContentInterface } from '@/lib/interfaces';
-import { QuestionContentType } from '@/lib/enums';
+import { Language, QuestionContentType } from '@/lib/enums';
 import { SpeakerButton } from '@/components/speaker-button';
 
 export function QuestionContent({
@@ -13,7 +14,14 @@ export function QuestionContent({
       <div className='pt-8 pb-4'>
         {questionContent.type === QuestionContentType.Text ||
         questionContent.type === QuestionContentType.Meaning ? (
-          <p className='text-3xl font-semibold text-center px-4'>
+          <p
+            className={twMerge(
+              'text-3xl font-semibold text-center px-4',
+              questionContent.language === Language.Vietnamese
+                ? 'font-vietnamese'
+                : ''
+            )}
+          >
             {questionContent.value}
           </p>
         ) : null}

@@ -1,11 +1,6 @@
 import type { Metadata } from 'next';
-import { Parkinsans } from 'next/font/google';
 import './globals.css';
-
-const parkinsans = Parkinsans({
-  variable: '--font-parkinsans',
-  subsets: ['latin'],
-});
+import { inter, parkinsans, questrial } from '@/lib/font';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,7 +14,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang='en'>
-      <body className={`${parkinsans.className} antialiased`}>{children}</body>
+      <body
+        className={`${parkinsans.className} ${questrial.variable} ${inter.variable} antialiased`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

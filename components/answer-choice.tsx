@@ -8,6 +8,7 @@ import {
   AnswerContent as AnswerContentInterface,
 } from '@/lib/interfaces';
 import { ConfettiCircle } from '@/components/confetti-circle';
+import { Language } from '@/lib/enums';
 
 export function AnswerChoice({
   answerContent,
@@ -47,6 +48,9 @@ export function AnswerChoice({
       <button
         className={twMerge(
           'w-full p-3 text-lg text-center font-medium border border-zinc-200 rounded-lg hover:bg-primary/5 hover:border-primary transition-all',
+          answerContent.language === Language.Vietnamese
+            ? 'font-vietnamese font-semibold'
+            : '',
           userAnswer
             ? 'hover:bg-white hover:border-zinc-200 text-zinc-400'
             : '',
