@@ -181,3 +181,7 @@ export const formatDurationTime = (time: number) => {
   }
   return '00:00';
 };
+
+export const sleep = (ms: number) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
