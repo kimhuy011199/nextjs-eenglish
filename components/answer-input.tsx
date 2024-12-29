@@ -8,16 +8,20 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { Language } from '@/lib/enums';
 import { DELAY_NEXT_QUESTION } from '@/lib/constants';
+import { useConfetti } from '@/hooks/use-confetti';
 
 export function AnswerInput({
   answerContent,
   userAnswer,
   handleUserAnswer,
+  shouldShowConfetti,
 }: {
   answerContent: AnswerContentInterface;
   userAnswer: string;
   handleUserAnswer: (value: string) => void;
+  shouldShowConfetti?: boolean;
 }) {
+  const { triggerConfetti, ConfettiRenderer } = useConfetti();
   const inputRef = useRef<HTMLInputElement>(null);
   const [input, setInput] = useState('');
   const [currentStatus, setCurrentStatus] = useState('');
@@ -30,6 +34,7 @@ export function AnswerInput({
   const handleSubmit = () => {
     handleUserAnswer(input);
     if (input === answerContent.correctAnswer) {
+      triggerConfetti();
       setCurrentStatus('correct');
       setTimeout(() => {
         resetInput();
@@ -57,7 +62,7 @@ export function AnswerInput({
 
   return (
     <div className='flex flex-col gap-3'>
-      <div className='flex items-center gap-3'>
+      <div className='flex items-center gap-3 relative'>
         <Input
           ref={inputRef}
           // placeholder='Enter your answer'
@@ -84,6 +89,7 @@ export function AnswerInput({
         >
           <Check size={40} strokeWidth={3} />
         </Button>
+        {shouldShowConfetti ? ConfettiRenderer : null}
       </div>
       {currentStatus === 'incorrect' ? (
         <div>

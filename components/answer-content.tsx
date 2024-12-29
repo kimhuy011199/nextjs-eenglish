@@ -22,6 +22,7 @@ export function AnswerContent({
           answerContent={answerContent}
           userAnswer={userAnswer}
           handleUserAnswer={handleUserAnswer}
+          shouldShowConfetti={shouldShowConfetti}
         />
       ) : null}
       {/* Mutiple choices */}

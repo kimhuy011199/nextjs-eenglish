@@ -9,6 +9,7 @@ import {
 } from '@/lib/interfaces';
 import { ConfettiCircle } from '@/components/confetti-circle';
 import { Language } from '@/lib/enums';
+import { useConfetti } from '@/hooks/use-confetti';
 
 export function AnswerChoice({
   answerContent,
@@ -23,25 +24,14 @@ export function AnswerChoice({
   choice: AnswerChoiceType;
   shouldShowConfetti?: boolean;
 }) {
-  const [showConfetti, setShowConfetti] = useState(false);
-
-  const handleConfetti = () => {
-    setShowConfetti(true);
-    setTimeout(() => {
-      setShowConfetti(false);
-      setTimeout(() => setShowConfetti(true), 150);
-      setTimeout(() => setShowConfetti(false), 300);
-    }, 150);
-  };
+  const { triggerConfetti, ConfettiRenderer } = useConfetti();
 
   const handleClick = (choice: AnswerChoiceType) => {
     handleUserAnswer(choice.value);
     if (shouldShowConfetti && answerContent.correctAnswer === choice.value) {
-      handleConfetti();
+      triggerConfetti();
     }
   };
-
-  const angles = Array.from({ length: 8 }, (_, i) => (i * Math.PI) / 4);
 
   return (
     <div className='flex w-full relative'>
@@ -67,14 +57,7 @@ export function AnswerChoice({
       >
         {choice.label}
       </button>
-      {shouldShowConfetti ? (
-        <AnimatePresence>
-          {showConfetti &&
-            angles.map((angle, index) => (
-              <ConfettiCircle key={index} angle={angle} radius={40} />
-            ))}
-        </AnimatePresence>
-      ) : null}
+      {shouldShowConfetti ? ConfettiRenderer : null}
     </div>
   );
 }

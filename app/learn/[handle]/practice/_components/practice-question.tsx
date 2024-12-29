@@ -37,7 +37,7 @@ export function PracticeQuestion({
     setPracticeQuestion(newPracticeQuestion);
     setUserAnswer('');
 
-    await sleep(100);
+    await sleep(50);
     setIsGeneratingQuestion(false);
   };
 
@@ -70,7 +70,7 @@ export function PracticeQuestion({
               initial={{ x: 10, opacity: 0 }}
               animate={{ x: 0, opacity: 1 }}
               exit={{ x: -10, opacity: 0 }}
-              transition={{ duration: 0.2 }}
+              transition={{ duration: 0.4 }}
               className='flex items-center'
             >
               <CardQuestionAnswer
