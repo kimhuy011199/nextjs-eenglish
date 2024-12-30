@@ -1,7 +1,7 @@
 import { PartOfSpeech } from '@/lib/enums';
 
 export const getVocabularies = async (lessonHandle: string) => {
-  // await new Promise((resolve) => setTimeout(resolve, 3000));
+  await new Promise((resolve) => setTimeout(resolve, 2000));
 
   return [
     {
