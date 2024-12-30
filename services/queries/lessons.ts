@@ -1,5 +1,5 @@
 export const getLesson = async (handle: string) => {
-  await new Promise((resolve) => setTimeout(resolve, 2000));
+  await new Promise((resolve) => setTimeout(resolve, 500));
 
   return {
     id: '1',
