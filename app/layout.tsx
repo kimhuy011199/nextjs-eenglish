@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
-import { inter, parkinsans, questrial } from '@/lib/font';
+import { inter, parkinsans, questrial, leckerliOne } from '@/lib/font';
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,7 +15,7 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body
-        className={`${parkinsans.className} ${questrial.variable} ${inter.variable} antialiased`}
+        className={`${parkinsans.className} ${questrial.variable} ${inter.variable} ${leckerliOne.variable} antialiased`}
       >
         {children}
       </body>

@@ -93,4 +93,8 @@
   .font-phonetic {
     font-family: var(--font-inter);
   }
+
+  .font-leckerli {
+    font-family: var(--font-leckerli);
+  }
 }

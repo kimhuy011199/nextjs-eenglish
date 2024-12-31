@@ -1,4 +1,4 @@
-import { Questrial, Parkinsans, Inter } from 'next/font/google';
+import { Questrial, Parkinsans, Inter, Leckerli_One } from 'next/font/google';
 
 // App font
 export const parkinsans = Parkinsans({
@@ -16,5 +16,11 @@ export const questrial = Questrial({
 // Phonetic font
 export const inter = Inter({
   variable: '--font-inter',
+  subsets: ['latin'],
+});
+
+export const leckerliOne = Leckerli_One({
+  variable: '--font-leckerli',
+  weight: ['400'],
   subsets: ['latin'],
 });
