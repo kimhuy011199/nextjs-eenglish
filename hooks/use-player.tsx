@@ -1,4 +1,3 @@
-import { Audio } from '@/lib/interfaces';
 import React, {
   useState,
   useRef,
@@ -7,6 +6,7 @@ import React, {
   useEffect,
   useCallback,
 } from 'react';
+import { Audio } from '@/lib/interfaces';
 
 interface PlayerContextType {
   audioData: Audio;
@@ -31,6 +31,7 @@ export const PlayerContext = createContext<PlayerContextType>({
     lessonId: '',
     src: '',
     duration: 0,
+    lyrics: [],
   },
   audioRef: null,
   shouldRepeat: false,

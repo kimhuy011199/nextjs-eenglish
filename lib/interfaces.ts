@@ -32,7 +32,7 @@ export interface Audio {
   src: string;
   duration: number;
   lyricSrc?: string;
-  lyrics?: string;
+  lyrics?: LyricLine[];
 }
 
 export interface Vocabulary {
@@ -59,4 +59,10 @@ export interface Sentence {
   sentence: string;
   translation?: string;
   audioSrc?: string;
+}
+
+export interface LyricLine {
+  startTime: number;
+  endTime: number;
+  text: string;
 }

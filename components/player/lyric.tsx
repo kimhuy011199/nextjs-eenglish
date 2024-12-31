@@ -10,7 +10,7 @@ export function Lyric() {
   return (
     <div className='mb-auto border text-center border-zinc-200 bg-zinc-50 rounded-2xl h-full flex flex-col justify-center items-center'>
       {shouldShowLyrics ? (
-        audioData?.lyrics ? (
+        audioData?.lyrics?.length ? (
           <LyricContent />
         ) : (
           <LyricEmpty />

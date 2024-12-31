@@ -185,3 +185,21 @@ export const formatDurationTime = (time: number) => {
 export const sleep = (ms: number) => {
   return new Promise((resolve) => setTimeout(resolve, ms));
 };
+
+export const parseSubtitles = (subtitleString: string) => {
+  const lines = subtitleString.trim().split('\n\n');
+  return lines.map((line) => {
+    const [id, timeRange, ...textLines] = line.split('\n');
+    const [startTime, endTime] = timeRange.split(' --> ').map((time) => {
+      const [hours, minutes, secondsAndMilliseconds] = time.split(':');
+      const [seconds, milliseconds] = secondsAndMilliseconds.split(',');
+      return (
+        (parseInt(hours) * 3600 + parseInt(minutes) * 60 + parseInt(seconds)) *
+          1000 +
+        parseInt(milliseconds)
+      );
+    });
+    const text = textLines.join(' ');
+    return { startTime, endTime, text };
+  });
+};
