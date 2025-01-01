@@ -22,3 +22,5 @@ export const VOCABULARY = {
     audioSrc: '',
   },
 };
+
+export const DELAY_NEXT_QUESTION = 1200;

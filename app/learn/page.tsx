@@ -5,6 +5,10 @@ import { getCourses } from '@/services/queries/courses';
 export default async function Learn() {
   const courses = await getCourses();
 
+  if (!courses) {
+    throw new Error('Failed to fetch courses.');
+  }
+
   return (
     <div className='w-full max-w-5xl mx-auto px-5 mb-10'>
       <div className='my-10'>
@@ -30,7 +34,7 @@ export default async function Learn() {
                 >
                   <div className='flex items-center gap-2'>
                     <span className='text-zinc-500 text-sm'>
-                      Lesson {lesson.id}.
+                      Lesson {lesson.episode}.
                     </span>
                     <h3 className='font-medium'>{lesson.name}</h3>
                   </div>

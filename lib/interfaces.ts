@@ -1,5 +1,24 @@
 import { AnswerContentType, Language, QuestionContentType } from '@/lib/enums';
 
+export interface Course {
+  id: string;
+  level: number;
+  name: string;
+  description: string;
+  lessons: Lesson[];
+}
+
+export interface Lesson {
+  id: string;
+  courseId: string;
+  name: string;
+  handle: string;
+  episode: number;
+  level: number;
+  audios: Audio[];
+  vocabularies: Vocabulary[];
+}
+
 export interface QuestionContent {
   type: QuestionContentType;
   description: string;
