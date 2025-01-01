@@ -2,6 +2,29 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
+1. Get Supabase connection
+
+   Go to [Settings](https://supabase.com/dashboard/project/_/settings/database) to get the envs
+
+```
+DATABASE_URL=
+DIRECT_URL=
+NEXT_PUBLIC_SUPABASE_URL=
+NEXT_PUBLIC_SUPABASE_ANON_KEY=
+```
+
+2. Create database migrations
+
+```
+npx prisma migrate dev --name init
+```
+
+3. Seeding the database
+
+```
+npm run seed
+```
+
 First, run the development server:
 
 ```bash

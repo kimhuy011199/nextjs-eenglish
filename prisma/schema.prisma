@@ -1,0 +1,89 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model Course {
+  id          String    @id @default(uuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  level       Int
+  name        String
+  description String
+  lessons     Lesson[]
+}
+
+model Lesson {
+  id           String      @id @default(uuid())
+  createdAt    DateTime    @default(now())
+  updatedAt    DateTime    @updatedAt
+  name         String
+  handle       String
+  level        Int
+  episode      Int
+  audios       Audio[]
+  vocabularies Vocabulary[]
+
+  course       Course     @relation(fields: [courseId], references: [id])
+  courseId     String
+}
+
+model Audio {
+  id          String    @id @default(uuid())
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  title       String
+  handle      String
+  src         String
+  lyricSrc    String
+  duration    Int
+
+  lesson      Lesson   @relation(fields: [lessonId], references: [id])
+  lessonId    String
+}
+
+model Vocabulary {
+  id            String     @id @default(uuid())
+  createdAt     DateTime   @default(now())
+  updatedAt     DateTime   @updatedAt
+  word          String
+  definition    String
+  meaning       String
+  partOfSpeech  String
+  imgSrc        String
+
+  lesson        Lesson     @relation(fields: [lessonId], references: [id])
+  lessonId      String
+  sentence      Sentence?  @relation(fields: [sentenceId], references: [id])
+  sentenceId    String?    @unique
+  phonetic      Phonetic?  @relation(fields: [phoneticId], references: [id])
+  phoneticId    String?    @unique
+}
+
+model Sentence {
+  id             String     @id @default(uuid())
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  text           String
+  translation    String
+  audioSrc       String
+
+  vocabulary     Vocabulary?
+  vocabularyId   String?
+}
+
+model Phonetic {
+  id             String     @id @default(uuid())
+  createdAt      DateTime   @default(now())
+  updatedAt      DateTime   @updatedAt
+  text           String
+  sound          String
+
+  vocabulary     Vocabulary?
+  vocabularyId   String?
+}

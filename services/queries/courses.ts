@@ -1,4 +1,10 @@
+import { createClient } from '@/lib/supabase/server';
+
 export const getCourses = async () => {
+  const supabase = await createClient();
+  const courses = await supabase.from('Course').select('*');
+  console.log('courses', courses);
+
   await new Promise((resolve) => setTimeout(resolve, 500));
 
   return [
