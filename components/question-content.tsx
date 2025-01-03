@@ -27,7 +27,7 @@ export function QuestionContent({
         ) : null}
         {questionContent.type === QuestionContentType.Voice ? (
           <p className='w-full flex justify-center'>
-            <SpeakerButton soundSource={questionContent.value} />
+            <SpeakerButton soundSource={questionContent.value} autoPlay />
           </p>
         ) : null}
       </div>

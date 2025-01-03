@@ -8,9 +8,11 @@ import { Button } from '@/components/ui/button';
 export function SpeakerButton({
   soundSource,
   className,
+  autoPlay = false,
 }: {
   soundSource: string;
   className?: string;
+  autoPlay?: boolean;
 }) {
   const speakerIcons = [Volume, Volume1, Volume2];
   const [isPlaying, setIsPlaying] = useState(false);
@@ -46,6 +48,13 @@ export function SpeakerButton({
       setSpeakerIcon(2);
     }
   }, [audioRef.current, isPlaying]);
+
+  // Auto play sound when autoPlay is true
+  useEffect(() => {
+    if (autoPlay) {
+      playSound();
+    }
+  }, [autoPlay]);
 
   return (
     <>

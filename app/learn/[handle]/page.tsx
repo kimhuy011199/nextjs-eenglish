@@ -16,14 +16,14 @@ export default async function Learn({
       items: [
         {
           title: 'Mini Story',
-          description: 'Learn English through simple, repetitive storytelling',
+          description: 'Learn English with short and funny stories.',
           pathname: 'story',
           icon: '/cat/mini-story.svg',
         },
         {
           title: 'Vocabulary',
           description:
-            'Learn new words and phrases in the context of the story',
+            'Learn new words and phrases in the context of the story.',
           pathname: 'vocabulary',
           icon: '/cat/vocabulary.svg',
         },
@@ -36,19 +36,19 @@ export default async function Learn({
         {
           title: 'Flashcards',
           description:
-            'Learn new words by using flashcards with images and audio',
+            'Learn vocabulary using flashcards with images and audio.',
           pathname: 'flashcards',
           icon: '/cat/flashcards.svg',
         },
         {
           title: 'Practice',
-          description: 'Practice the new words in sentences and questions',
+          description: 'Practice the your vocabulary in questions.',
           pathname: 'practice',
           icon: '/cat/practice.svg',
         },
         {
           title: 'Quiz',
-          description: 'Test your knowledge of the new words by taking a quiz',
+          description: 'Test your knowledge of vocabulary by taking a quiz.',
           pathname: 'quiz',
           icon: '/cat/quiz.svg',
         },

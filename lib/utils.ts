@@ -43,14 +43,14 @@ export const generateQuestion = (
   }
 
   const type = getRandomItemFromArray(typesList);
-  // const type = 1;
 
   switch (type) {
     case 1:
       return {
         questionContent: {
           type: QuestionContentType.Text,
-          description: 'Give the English translation of the following word',
+          description:
+            'Choose the correct English word for the following Vietnamese meaning.',
           value: vocab.meaning,
           language: Language.Vietnamese,
         },
@@ -65,7 +65,8 @@ export const generateQuestion = (
       return {
         questionContent: {
           type: QuestionContentType.Text,
-          description: 'Give the Vietnamese translation of the following word',
+          description:
+            'Choose the correct Vietnamese meaning for the following English word.',
           value: vocab.word,
           language: Language.English,
         },
@@ -84,7 +85,8 @@ export const generateQuestion = (
       return {
         questionContent: {
           type: QuestionContentType.Voice,
-          description: 'Give the English voice of the following word',
+          description:
+            'Listen to the audio and select the correct Vietnamese meaning.',
           value: vocab.phonetic.sound,
           language: Language.English,
         },
@@ -103,7 +105,8 @@ export const generateQuestion = (
       return {
         questionContent: {
           type: QuestionContentType.Text,
-          description: 'Give the English text of the following word',
+          description:
+            'Type the Vietnamese meaning of the following English word.',
           value: vocab.word,
           language: Language.English,
         },
@@ -118,7 +121,8 @@ export const generateQuestion = (
       return {
         questionContent: {
           type: QuestionContentType.Meaning,
-          description: 'Give the English meaning of the following word',
+          description:
+            'Type the English word that matches the following definition.',
           value: vocab.definition,
           language: Language.English,
         },
@@ -134,7 +138,7 @@ export const generateQuestion = (
       return {
         questionContent: {
           type: QuestionContentType.Voice,
-          description: 'Give the English voice of the following word',
+          description: 'Listen to the audio and type the correct English word.',
           value: vocab.phonetic.sound,
           language: Language.English,
         },

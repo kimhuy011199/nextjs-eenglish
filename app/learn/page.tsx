@@ -17,13 +17,15 @@ export default async function Learn() {
       <div className='flex flex-col gap-10'>
         {courses.map((section, index) => (
           <div key={index} className='grid grid-cols-1 gap-10 sm:grid-cols-3'>
-            <div className='flex flex-col gap-1.5'>
+            <div className='flex flex-col gap-2'>
               <div className='text-zinc-500 flex items-center gap-2'>
                 <Album size={16} />
                 <p className='text-sm font-medium'>Level {section.level}</p>
               </div>
               <h2 className='text-xl font-semibold'>{section.name}</h2>
-              <p className='text-zinc-500 text-sm'>{section.description}</p>
+              <p className='text-zinc-500 text-sm leading-relaxed'>
+                {section.description}
+              </p>
             </div>
             <div className='col-span-2 flex flex-col'>
               {section.lessons.map((lesson, index) => (

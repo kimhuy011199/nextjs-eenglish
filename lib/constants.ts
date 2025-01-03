@@ -1,25 +1,28 @@
 import { PartOfSpeech } from '@/lib/enums';
 
 export const VOCABULARY = {
-  id: '111',
-  word: 'atmosphere',
-  definition: 'the air in a particular place',
-  meaning: 'bầu không khí',
+  id: '1',
+  word: 'kite',
+  definition:
+    'a toy consisting of a light frame with thin material stretched over it',
+  meaning: 'diều',
   partOfSpeech: PartOfSpeech.Noun,
-  imgSrc: '/cat/flashcards.svg',
+  imgSrc:
+    'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735836839/eenglish/1.1.day-of-the-dead/kite_cqrwii.jpg',
   phonetic: {
     id: '1',
-    vocabularyId: '111',
-    text: '/ˈætməsˌfɪɹ/',
+    vocabularyId: '1',
+    text: '/kaɪt/',
     sound:
-      'https://api.dictionaryapi.dev/media/pronunciations/en/atmosphere-us.mp3',
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/k/kit/kite_/kite.mp3',
   },
   sentence: {
     id: '1',
-    vocabularyId: '111',
-    sentence: 'The atmosphereis like a party.',
-    translation: 'Bầu không khí giống như một bữa tiệc.',
-    audioSrc: '',
+    vocabularyId: '1',
+    text: 'Many kids are flying kites.',
+    translation: 'Nhiều trẻ em đang thả diều.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1735805543/eenglish/1.1.day-of-the-dead/vocab_sentence_kite_u5winf.mp3',
   },
 };
 
