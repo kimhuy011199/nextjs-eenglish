@@ -5,6 +5,10 @@ import Link from 'next/link';
 export async function BreadcrumbLesson({ handle }: { handle: string }) {
   const lesson = await getLesson(handle);
 
+  if (!lesson) {
+    return null;
+  }
+
   return (
     <BreadcrumbPage>
       <Link

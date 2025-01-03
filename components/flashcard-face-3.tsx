@@ -24,8 +24,8 @@ export function FlashcardFace3({ vocabulary }: { vocabulary: Vocabulary }) {
           className='h-8 w-8 [&_svg]:size-4'
           soundSource={vocabulary.sentence?.audioSrc || ''}
         />
-        <div>
-          <p className='font-medium font-lg'>{vocabulary.sentence.sentence}</p>
+        <div className='flex flex-col gap-1.5'>
+          <p className='font-medium font-lg'>{vocabulary.sentence.text}</p>
           <p className='text-zinc-500 font-vietnamese'>
             {vocabulary.sentence?.translation}
           </p>

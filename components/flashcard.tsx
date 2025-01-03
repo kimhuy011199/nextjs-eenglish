@@ -31,7 +31,7 @@ export function Flashcard({ vocabulary }: { vocabulary: Vocabulary }) {
             className='flex items-center'
           >
             <div className='flex gap-10 items-center p-4'>
-              <div className='min-w-48 h-48 rounded-xl border border-zinc-200'>
+              <div className='min-w-48 h-48 rounded-xl border border-zinc-200 overflow-hidden'>
                 <Image
                   src={vocabulary.imgSrc}
                   alt={vocabulary.word}

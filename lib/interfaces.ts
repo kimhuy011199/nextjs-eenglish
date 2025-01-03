@@ -75,7 +75,7 @@ export interface Phonetic {
 export interface Sentence {
   id: string;
   vocabularyId: string;
-  sentence: string;
+  text: string;
   translation?: string;
   audioSrc?: string;
 }
