@@ -1,12 +1,18 @@
-export const getLesson = async (handle: string) => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+import { Lesson } from '@/lib/interfaces';
+import { createClient } from '@/lib/supabase/server';
 
-  return {
-    id: '1',
-    courseId: '1',
-    name: 'Day Of The Dead',
-    handle: 'day-of-the-dead',
-    level: 1,
-    episode: 1,
-  };
+export const getLesson = async (handle: string) => {
+  const supabase = await createClient();
+  const lessonData = await supabase
+    .from('Lesson')
+    .select('*')
+    .eq('handle', handle)
+    .limit(1)
+    .single();
+
+  if (lessonData.error) {
+    return null;
+  }
+
+  return lessonData.data as Lesson;
 };

@@ -1,22 +1,28 @@
+import { createClient } from '@/lib/supabase/server';
+import { Audio } from '@/lib/interfaces';
 import { parseSubtitles } from '@/lib/utils';
 
 export const getAudio = async (handle: string) => {
-  await new Promise((resolve) => setTimeout(resolve, 500));
+  const supabase = await createClient();
+  const audioData = await supabase
+    .from('Audio')
+    .select('*')
+    .eq('handle', handle)
+    .limit(1)
+    .single();
 
-  const audio = {
-    id: '1',
-    title: 'Mini Story',
-    lessonId: '1',
-    handle: 'day-of-the-dead-story',
-    src: 'https://res.cloudinary.com/cloudinaryassets/video/upload/v1734968823/dayofthedead_qiasff.mp3',
-    duration: 82,
-    lyricSrc:
-      'https://res.cloudinary.com/cloudinaryassets/raw/upload/v1735628739/dayofthedead_eyae0p.srt',
-  };
+  if (audioData.error) {
+    return null;
+  }
 
-  const lyricsFile = await fetch(audio.lyricSrc);
+  if (!audioData.data?.lyricSrc) {
+    return audioData.data as Audio;
+  }
+
+  // Fetch the lyrics file and parse it
+  const lyricsFile = await fetch(audioData.data?.lyricSrc);
   const lyricsText = await lyricsFile.text();
   const lyrics = parseSubtitles(lyricsText);
 
-  return { ...audio, lyrics };
+  return { ...audioData.data, lyrics } as Audio;
 };
