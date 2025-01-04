@@ -1,6 +1,7 @@
 import { ArrowRight, Album } from 'lucide-react';
 import { CardLink } from '@/components/card-link';
 import { getCourses } from '@/services/queries/courses';
+import { Logo } from '@/components/logo';
 
 export default async function Learn() {
   const courses = await getCourses();
@@ -12,7 +13,16 @@ export default async function Learn() {
   return (
     <div className='w-full max-w-5xl mx-auto px-5 mb-10'>
       <div className='my-10'>
-        <h1 className='text-3xl font-semibold'>Learn Page</h1>
+        <div className='flex items-center justify-center gap-2'>
+          <Logo height={40} />
+        </div>
+        <div className='pt-10 pb-3 flex flex-col gap-3'>
+          <h1 className='text-3xl font-semibold'>Course Lessons</h1>
+          <p className='text-zinc-500 w-full max-w-2xl'>
+            Explore the lessons and start speaking English confidently and
+            fluently with Professor A.J. Hoge's Effortless English method.
+          </p>
+        </div>
       </div>
       <div className='flex flex-col gap-10'>
         {courses.map((section, index) => (

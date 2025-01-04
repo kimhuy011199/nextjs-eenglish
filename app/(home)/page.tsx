@@ -4,12 +4,15 @@ import { MoveRight } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Flashcard } from '@/components/flashcard';
 import { VOCABULARY } from '@/lib/constants';
+import { Logo } from '@/components/logo';
 
 export default function Home() {
   return (
     <>
       <div className='px-8 pt-10 pb-4'>
-        <div className='h-20 py-8'></div>
+        <div className='flex flex-col items-center pb-8'>
+          <Logo />
+        </div>
         <div className='px-8 py-12 w-full mx-auto flex flex-col justify-center items-center rounded-[32px] bg-zinc-100 border border-zinc-200'>
           <div className='w-full p-8 max-w-2xl flex flex-col justify-center items-center gap-6'>
             <h1 className='text-center text-5xl leading-tight font-semibold'>
@@ -25,7 +28,7 @@ export default function Home() {
                 href='/learn'
                 className='flex items-center gap-3 !h-12 !px-8 !rounded-xl group'
               >
-                <span className='text-lg'>Learn Now</span>
+                <span className='text-lg'>Explore Lessons</span>
                 <MoveRight
                   strokeWidth={3}
                   className='group-hover:translate-x-1 transition-all'

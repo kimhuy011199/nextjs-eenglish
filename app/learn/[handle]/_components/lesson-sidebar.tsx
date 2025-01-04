@@ -10,11 +10,15 @@ import {
   SidebarFooter,
   SidebarHeader,
   SidebarRail,
+  useSidebar,
 } from '@/components/ui/sidebar';
+import { Logo } from '@/components/logo';
 
 export function LessonSidebar({
   ...props
 }: React.ComponentProps<typeof Sidebar>) {
+  const { open } = useSidebar();
+
   const navItems = [
     {
       title: 'Listening',
@@ -56,7 +60,11 @@ export function LessonSidebar({
 
   return (
     <Sidebar collapsible='icon' {...props}>
-      <SidebarHeader></SidebarHeader>
+      <SidebarHeader>
+        <div className='px-0.5 pt-2.5'>
+          <Logo height={28} isOpen={open} />
+        </div>
+      </SidebarHeader>
       <SidebarContent>
         <NavMain items={navItems} />
       </SidebarContent>
