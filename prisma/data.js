@@ -132,11 +132,10 @@ const audios = [
     handle: 'day-of-the-dead-story',
     src: 'https://res.cloudinary.com/cloudinaryassets/video/upload/v1735802434/eenglish/1.1.day-of-the-dead/ministory_kgqbqn.mp3',
     lyricSrc:
-      'https://res.cloudinary.com/cloudinaryassets/raw/upload/v1735802432/eenglish/1.1.day-of-the-dead/ministory_transcript_ud9gzz.srt',
+      'https://res.cloudinary.com/cloudinaryassets/raw/upload/v1736133112/eenglish/1.1.day-of-the-dead/transcript_ministory_f5qct3.srt',
     duration: 82,
     lessonId: '984911c4-ebf7-45b7-8a56-5c87a038e5b6',
   },
-
   {
     id: 'd9b2019c-0af3-40ee-8780-7e5e2e156817',
     title: 'Day Of The Dead - Vocabulary',
@@ -145,6 +144,25 @@ const audios = [
     lyricSrc: '',
     duration: 589,
     lessonId: '984911c4-ebf7-45b7-8a56-5c87a038e5b6',
+  },
+  {
+    id: 'b0f8b4c2-4f7d-4b5c-9e9c-0c8a6b2b3f3b',
+    title: 'A Kiss - Mini Story',
+    handle: 'a-kiss-story',
+    src: 'https://res.cloudinary.com/cloudinaryassets/video/upload/v1735898555/eenglish/1.2.a-kiss/ministory_zya8ht.mp3',
+    lyricSrc:
+      'https://res.cloudinary.com/cloudinaryassets/raw/upload/v1736132871/eenglish/1.2.a-kiss/transcript_ministory_z0zjru.srt',
+    duration: 83,
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: 'f5a4a5e0-1b3e-4b8b-8f7d-3e5a6f8a0c7b',
+    title: 'A Kiss - Vocabulary',
+    handle: 'a-kiss-vocabulary',
+    src: 'https://res.cloudinary.com/cloudinaryassets/video/upload/v1735898572/eenglish/1.2.a-kiss/vocabulary_ezi1bb.mp3',
+    lyricSrc: '',
+    duration: 563,
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
   },
 ];
 
@@ -204,6 +222,62 @@ const phonetics = [
     text: '/əkˈnɑː.lɪdʒ/',
     sound:
       'https://dictionary.cambridge.org/vi/media/english/us_pron/a/ack/ackno/acknowledge.mp3',
+  },
+  {
+    id: '97061e51-fbfe-40a8-ae81-48ff7784cfb7',
+    vocabularyId: '406635f1-56cc-4819-afe2-fd8d5efe065d',
+    text: '/hjuːdʒ/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/h/hug/huge_/huge.mp3',
+  },
+  {
+    id: '89807907-ca7d-4c7e-bb55-6f2b75f7b346',
+    vocabularyId: '7002160e-5f23-442e-b666-cc8c57ce3b03',
+    text: '/jel/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/y/yel/yell_/yell.mp3',
+  },
+  {
+    id: 'ec985e45-804b-4af5-aab3-2862f0c1ffaf',
+    vocabularyId: '6ffb87d1-310f-4a96-aca1-85e6538e476e',
+    text: '/tʃiːk/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/c/che/cheek/cheek.mp3',
+  },
+  {
+    id: 'e193608b-7540-4a85-b227-d44f929e2c1a',
+    vocabularyId: '11512c73-9a7e-44a9-8051-d678a7480b72',
+    text: '/ˈsaɪd.wɑːk/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/s/sid/sidew/sidewalk.mp3',
+  },
+  {
+    id: 'b4506cb1-c427-43e1-bda9-4475cb2cd714',
+    vocabularyId: '577a51fd-c2ff-437d-a28e-7899a5fef7f1',
+    text: '/blɑːnd/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/b/blo/blond/blond.mp3',
+  },
+  {
+    id: '79a4bddc-b6af-4f5a-8166-f0a0114e1fce',
+    vocabularyId: 'df89e773-2081-4885-8be7-2f656f93b6d8',
+    text: '/ɪɡˈnɔːr/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/i/ign/ignor/ignore.mp3',
+  },
+  {
+    id: '24002fe3-e38a-4e70-8ae9-e20dddd80ca0',
+    vocabularyId: '967fa384-a8b8-4597-a3d4-8b4173fe244d',
+    text: '/sɚˈpɹaɪz/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/s/sur/surpr/surprise.mp3',
+  },
+  {
+    id: '346d16a9-a4d0-4dc2-9b52-3572efee2caf',
+    vocabularyId: '2220c4c0-9659-4b3f-9141-909b4e8f2860',
+    text: '/ɪkˈspensɪv/',
+    sound:
+      'https://dictionary.cambridge.org/vi/media/english/us_pron/e/exp/expen/expensive.mp3',
   },
 ];
 
@@ -272,6 +346,71 @@ const sentences = [
       'Tôi thích họ thừa nhận cái chết thay vì phủ nhận nó như người Mỹ.',
     audioSrc:
       'https://res.cloudinary.com/cloudinaryassets/video/upload/v1735807217/eenglish/1.1.day-of-the-dead/vocab_sentence_acknowledge_yiwf5x.mp3',
+  },
+  {
+    id: '848c85dc-9959-44f9-acd3-4fe4e1e79ba8',
+    vocabularyId: '406635f1-56cc-4819-afe2-fd8d5efe065d',
+    text: "It's a huge, blue, fast car.",
+    translation: 'Đó là một chiếc xe to, màu xanh, nhanh.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131272/eenglish/1.2.a-kiss/vocab_huge_sentence_igcsy8.mp3',
+  },
+  {
+    id: 'a2505466-bc6b-4e93-ade2-bd8980615b5e',
+    vocabularyId: '7002160e-5f23-442e-b666-cc8c57ce3b03',
+    text: 'He yells to her, "What\'s up?"',
+    translation: 'Anh ấy hét lên với cô ấy, "Có chuyện gì vậy?"',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131340/eenglish/1.2.a-kiss/vocab_yell_sentence_vgozlq.mp3',
+  },
+  {
+    id: 'c1d35928-1cce-458e-8646-ce60d4cdea2f',
+    vocabularyId: '6ffb87d1-310f-4a96-aca1-85e6538e476e',
+    text: 'He says, "That\'s it, just a kiss on the cheek?"',
+    translation: 'Anh ấy nói, "Đó là tất cả, chỉ là một nụ hôn trên má?"',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131439/eenglish/1.2.a-kiss/vocab_cheek_sentence_e66yjy.mp3',
+  },
+  {
+    id: 'bc54b9b1-b38e-4586-8f3c-f0911c243be1',
+    vocabularyId: '11512c73-9a7e-44a9-8051-d678a7480b72',
+    text: 'Carlos stands on the sidewalk.',
+    translation: 'Carlos đứng trên vỉa hè.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131545/eenglish/1.2.a-kiss/vocab_sidewalk_sentence_bpfmku.mp3',
+  },
+  {
+    id: 'ee4c1ab4-79e8-4272-ab36-7b7dac94394c',
+    vocabularyId: '577a51fd-c2ff-437d-a28e-7899a5fef7f1',
+    text: 'She has long blond hair and is beautiful.',
+    translation: 'Cô ấy có mái tóc vàng dài và rất xinh đẹp.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131709/eenglish/1.2.a-kiss/vocab_blond_sentence_ysg8ve.mp3',
+  },
+  {
+    id: 'c7e494af-3a7b-43c1-9bf1-42148c11e962',
+    vocabularyId: 'df89e773-2081-4885-8be7-2f656f93b6d8',
+    text: 'She keeps going and ignores him.',
+    translation: 'Cô ấy tiếp tục đi và phớt lờ anh ấy.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131781/eenglish/1.2.a-kiss/vocab_ignore_sentence_do5vua.mp3',
+  },
+  {
+    id: 'e24d28f7-a7aa-4e1e-912f-9cf0eabaee87',
+    vocabularyId: '967fa384-a8b8-4597-a3d4-8b4173fe244d',
+    text: 'But if you give me your car, I will give you a surprise.',
+    translation:
+      'Nhưng nếu bạn cho tôi chiếc xe của bạn, tôi sẽ cho bạn một bất ngờ.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131919/eenglish/1.2.a-kiss/vocab_surprise_sentence_ptfhoo.mp3',
+  },
+  {
+    id: '269d4d9e-b4bc-4651-9ba0-f7161db3fd57',
+    vocabularyId: '2220c4c0-9659-4b3f-9141-909b4e8f2860',
+    text: "I'll take you to an expensive restaurant.",
+    translation: 'Tôi sẽ đưa bạn đến một nhà hàng đắt tiền.',
+    audioSrc:
+      'https://res.cloudinary.com/cloudinaryassets/video/upload/v1736131997/eenglish/1.2.a-kiss/vocab_expensive_sentence_fsy6an.mp3',
   },
 ];
 
@@ -372,6 +511,104 @@ const vocabularies = [
     phoneticId: 'def226ec-sn93-4e70-83c3-12a1527d9dc9',
     sentenceId: '922dbec0-a79a-41a1-f293-722763ad11a6',
     lessonId: '984911c4-ebf7-45b7-8a56-5c87a038e5b6',
+  },
+  {
+    id: '406635f1-56cc-4819-afe2-fd8d5efe065d',
+    word: 'huge',
+    definition: 'extremely large',
+    meaning: 'to lớn',
+    partOfSpeech: PartOfSpeech.Adjective,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_huge_cjz6wt.png',
+    phoneticId: '97061e51-fbfe-40a8-ae81-48ff7784cfb7',
+    sentenceId: '848c85dc-9959-44f9-acd3-4fe4e1e79ba8',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: '7002160e-5f23-442e-b666-cc8c57ce3b03',
+    word: 'yell',
+    definition:
+      'to shout something or make a loud noise, usually when you are angry, in pain, or excited',
+    meaning: 'hét lên',
+    partOfSpeech: PartOfSpeech.Verb,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_yell_mlfpqu.jpg',
+    phoneticId: '89807907-ca7d-4c7e-bb55-6f2b75f7b346',
+    sentenceId: 'a2505466-bc6b-4e93-ade2-bd8980615b5e',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: '6ffb87d1-310f-4a96-aca1-85e6538e476e',
+    word: 'cheek',
+    definition:
+      'the soft part of your face that is below your eye and between your mouth and ear',
+    meaning: 'gò má',
+    partOfSpeech: PartOfSpeech.Noun,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961509/eenglish/1.2.a-kiss/vocab_cheek_zlx53v.jpg',
+    phoneticId: 'ec985e45-804b-4af5-aab3-2862f0c1ffaf',
+    sentenceId: 'c1d35928-1cce-458e-8646-ce60d4cdea2f',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: '11512c73-9a7e-44a9-8051-d678a7480b72',
+    word: 'sidewalk',
+    definition: 'a path with a hard surface on one or both sides of a road',
+    meaning: 'vỉa hè',
+    partOfSpeech: PartOfSpeech.Noun,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_sidewalk_xxxhmk.png',
+    phoneticId: 'e193608b-7540-4a85-b227-d44f929e2c1a',
+    sentenceId: 'bc54b9b1-b38e-4586-8f3c-f0911c243be1',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: '577a51fd-c2ff-437d-a28e-7899a5fef7f1',
+    word: 'blond',
+    definition: 'a person, with pale yellow or gold hair',
+    meaning: 'tóc vàng',
+    partOfSpeech: PartOfSpeech.Adjective,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_blond_d4zkmc.png',
+    phoneticId: 'b4506cb1-c427-43e1-bda9-4475cb2cd714',
+    sentenceId: 'ee4c1ab4-79e8-4272-ab36-7b7dac94394c',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: 'df89e773-2081-4885-8be7-2f656f93b6d8',
+    word: 'ignore',
+    definition: 'to intentionally not listen or give attention to',
+    meaning: 'bỏ qua',
+    partOfSpeech: PartOfSpeech.Verb,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_ignore_nmfbpq.png',
+    phoneticId: '79a4bddc-b6af-4f5a-8166-f0a0114e1fce',
+    sentenceId: 'c7e494af-3a7b-43c1-9bf1-42148c11e962',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: '967fa384-a8b8-4597-a3d4-8b4173fe244d',
+    word: 'surprise',
+    definition: 'an unexpected event',
+    meaning: 'bất ngờ',
+    partOfSpeech: PartOfSpeech.Noun,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_surprise_j5uxq1.jpg',
+    phoneticId: '24002fe3-e38a-4e70-8ae9-e20dddd80ca0',
+    sentenceId: 'e24d28f7-a7aa-4e1e-912f-9cf0eabaee87',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
+  },
+  {
+    id: '2220c4c0-9659-4b3f-9141-909b4e8f2860',
+    word: 'expensive',
+    definition: 'costing a lot of money',
+    meaning: 'đắt tiền',
+    partOfSpeech: PartOfSpeech.Adjective,
+    imgSrc:
+      'https://res.cloudinary.com/cloudinaryassets/image/upload/v1735961510/eenglish/1.2.a-kiss/vocab_expensive_aimvef.png',
+    phoneticId: '346d16a9-a4d0-4dc2-9b52-3572efee2caf',
+    sentenceId: '269d4d9e-b4bc-4651-9ba0-f7161db3fd57',
+    lessonId: 'db0d5bf2-6910-4fb5-9717-6c9c5d75409a',
   },
 ];
 
