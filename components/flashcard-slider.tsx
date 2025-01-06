@@ -37,7 +37,7 @@ export function FlashcardSlider({
   };
 
   return (
-    <div className='mx-auto flex flex-col items-center justify-center gap-8 sm:gap-4 w-full lg:w-[740px]'>
+    <div className='mx-auto flex flex-col items-center justify-center gap-8 sm:gap-4 w-full lg:w-[720px]'>
       <div className='flex flex-col items-center justify-center relative h-[500px] lg:h-[360px] w-full'>
         <AnimatePresence custom={direction} initial={false}>
           <motion.div

@@ -18,6 +18,7 @@ import {
   SidebarMenuSub,
   SidebarMenuSubButton,
   SidebarMenuSubItem,
+  useSidebar,
 } from '@/components/ui/sidebar';
 
 export function NavMain({
@@ -38,6 +39,7 @@ export function NavMain({
   const pathname = usePathname();
   const { handle } = params;
   const currentPath = pathname.split('/').pop();
+  const { setOpenMobile } = useSidebar();
 
   return (
     <SidebarGroup>
@@ -70,6 +72,7 @@ export function NavMain({
                               ? '!text-primary !font-medium'
                               : ''
                           }
+                          onClick={() => setOpenMobile(false)}
                         >
                           <span>{subItem.title}</span>
                         </Link>
