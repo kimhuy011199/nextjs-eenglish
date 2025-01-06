@@ -3,10 +3,10 @@ import { SpeakerButton } from '@/components/speaker-button';
 
 export function FlashcardFace2({ vocabulary }: { vocabulary: Vocabulary }) {
   return (
-    <div className='flex flex-col gap-4'>
-      <div className='flex items-center gap-6'>
+    <div className='flex flex-col gap-3 lg:gap-4'>
+      <div className='flex flex-col sm:flex-row sm:items-center sm:gap-6'>
         <p className='text-2xl font-semibold text-primary'>{vocabulary.word}</p>
-        <span className='text-zinc-500 font-medium'>
+        <span className='text-zinc-500 font-medium pb-2 sm:pb-0'>
           {vocabulary.partOfSpeech}
         </span>
       </div>

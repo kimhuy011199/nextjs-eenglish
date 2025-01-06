@@ -11,8 +11,12 @@ export function PlayerInfo() {
 
   return (
     <div>
-      <div className='font-medium text-lg'>{title}</div>
-      <div className='text-zinc-500 text-sm'>A.J. Hoge</div>
+      <div className='text-center lg:text-left font-medium xl:text-lg'>
+        {title}
+      </div>
+      <div className='text-center lg:text-left text-zinc-500 text-sm'>
+        A.J. Hoge
+      </div>
     </div>
   );
 }

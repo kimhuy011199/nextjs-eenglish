@@ -21,7 +21,7 @@ export default async function Flashcards({
   }
 
   return (
-    <div className='flex flex-col justify-center items-center h-full'>
+    <div className='flex flex-col pt-4 sm:pt-0 sm:justify-center sm:items-center h-full'>
       <FlashcardSlider vocabularies={vocabularies} />
     </div>
   );

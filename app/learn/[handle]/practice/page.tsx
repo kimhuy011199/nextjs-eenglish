@@ -21,7 +21,7 @@ export default async function Practice({
   }
 
   return (
-    <div className='flex flex-col h-full justify-center items-center relative'>
+    <div className='flex flex-col md:h-full md:justify-center md:items-center relative'>
       <PracticeQuestion vocabularies={vocabularies} />
     </div>
   );

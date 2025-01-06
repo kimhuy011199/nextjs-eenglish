@@ -64,7 +64,7 @@ export default async function Learn({
             <section.icon size={16} className='inline-block' />
             <h2 className='font-medium'>{section.label}</h2>
           </div>
-          <div className='grid grid-cols-3 gap-4'>
+          <div className='grid sm:grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 xl:max-w-7xl gap-4'>
             {section.items.map((item, index) => (
               <CardLink
                 key={index}

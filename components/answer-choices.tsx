@@ -18,7 +18,7 @@ export function AnswerChoices({
   shouldShowConfetti?: boolean;
 }) {
   return (
-    <div className='grid grid-cols-2 gap-3'>
+    <div className='grid md:grid-cols-2 gap-3'>
       {Array.isArray(answerContent.value)
         ? answerContent.value.map((choice: AnswerChoiceType) => (
             <AnswerChoice

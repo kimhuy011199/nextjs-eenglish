@@ -12,7 +12,7 @@ export function Flashcard({ vocabulary }: { vocabulary: Vocabulary }) {
   const { selectedTab, handleNextTab } = useFlashcard(vocabulary);
 
   return (
-    <div className='border border-zinc-200 p-6 w-full rounded-2xl relative flex items-center shadow-lg'>
+    <div className='border border-zinc-200 min-h-[520px] sm:min-h-[480px] lg:min-h-[320px] p-2 md:p-6 w-full rounded-2xl relative flex items-center shadow-lg'>
       <Button
         onClick={handleNextTab}
         variant='outline'
@@ -30,7 +30,7 @@ export function Flashcard({ vocabulary }: { vocabulary: Vocabulary }) {
             transition={{ duration: 0.2 }}
             className='flex items-center'
           >
-            <div className='flex gap-10 items-center p-4'>
+            <div className='flex flex-col lg:flex-row gap-5 lg:gap-8 xl:gap-10 items-start lg:items-center p-3 xl:p-4'>
               <div className='min-w-48 h-48 rounded-xl border border-zinc-200 overflow-hidden'>
                 <Image
                   src={vocabulary.imgSrc}

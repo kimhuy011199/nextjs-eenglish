@@ -63,7 +63,7 @@ export function PracticeQuestion({
 
   return (
     <>
-      <div className='max-w-2xl mx-auto w-full flex flex-col gap-4 relative pb-16'>
+      <div className='max-w-2xl mx-auto w-full flex flex-col gap-4 relative pb-10 pt-6 md:pb-16 md:pt-0'>
         {!isGeneratingQuestion ? (
           <AnimatePresence mode='wait'>
             <motion.div
@@ -82,7 +82,7 @@ export function PracticeQuestion({
           </AnimatePresence>
         ) : null}
       </div>
-      <div className='flex justify-center gap-4 absolute bottom-0 right-0 left-0 pb-3'>
+      <div className='flex flex-col max-w-xs mx-auto w-full lg:max-w-none lg:flex-row justify-center gap-2 lg:gap-4 md:absolute bottom-0 right-0 left-0 pb-3'>
         <AnswerTypeModal
           answerContentTypes={answerContentTypes}
           setAnswerContentTypes={setAnswerContentTypes}
