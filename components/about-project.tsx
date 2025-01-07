@@ -17,9 +17,10 @@ export function AboutProject() {
       <DialogTrigger>
         <Button
           variant={'outline'}
-          className='text-left flex items-center justify-center !px-2 !py-1.5'
+          className='text-left flex items-center justify-center !px-2 !py-1.5 [&_svg]:size-5]'
+          asChild
         >
-          <Info />
+          <Info size={36} />
         </Button>
       </DialogTrigger>
       <DialogContent>

@@ -76,13 +76,20 @@ export default function Home() {
               Reinforce your learning with interactive vocabulary exercises to
               deepen your understanding and retention.
             </p>
-            <div className='w-full max-w-4xl mx-auto grid grid-cols-2 mt-12 gap-3'>
-              <div className='w-full h-56 bg-zinc-200 rounded-xl' />
-              <div className='w-full h-56 bg-zinc-200 rounded-xl' />
-              <div className='w-full h-56 bg-zinc-200 rounded-xl' />
-              <div className='w-full h-56 bg-zinc-200 rounded-xl' />
-              <div className='w-full h-56 bg-zinc-200 rounded-xl' />
-              <div className='w-full h-56 bg-zinc-200 rounded-xl' />
+            <div className='w-full max-w-4xl mx-auto grid md:grid-cols-2 mt-12 gap-4'>
+              {Array.from({ length: 6 }).map((_, index) => (
+                <div
+                  key={index}
+                  className='rounded-xl overflow-hidden border border-zinc-200 p-1.5 shadow-lg flex flex-col justify-center items-center'
+                >
+                  <Image
+                    src={`/practice/${index + 1}.png`}
+                    alt={(index + 1).toString()}
+                    width={500}
+                    height={500}
+                  />
+                </div>
+              ))}
             </div>
           </div>
         </div>
