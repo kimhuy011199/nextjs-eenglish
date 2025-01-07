@@ -13,6 +13,7 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { Logo } from '@/components/logo';
+import { AboutProject } from '@/components/about-project';
 
 export function LessonSidebar({
   ...props
@@ -68,7 +69,9 @@ export function LessonSidebar({
       <SidebarContent>
         <NavMain items={navItems} />
       </SidebarContent>
-      <SidebarFooter></SidebarFooter>
+      <SidebarFooter>
+        <AboutProject />
+      </SidebarFooter>
       <SidebarRail />
     </Sidebar>
   );
