@@ -3,6 +3,7 @@ import { getLesson } from '@/services/queries/lessons';
 import { getVocabularies } from '@/services/queries/vocabularies';
 import { PracticeQuestion } from '@/app/learn/[handle]/practice/_components/practice-question';
 import { ResourceLimit } from '@/components/resource-limit';
+import { TourPractice } from '@/components/product-tour/practice';
 
 export default async function Practice({
   params,
@@ -22,6 +23,7 @@ export default async function Practice({
 
   return (
     <div className='flex flex-col md:h-full md:justify-center md:items-center relative'>
+      <TourPractice />
       <PracticeQuestion vocabularies={vocabularies} />
     </div>
   );

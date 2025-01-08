@@ -1,4 +1,5 @@
 import { PlayerContainer } from '@/components/player/player-container';
+import { TourAudioPlayer } from '@/components/product-tour/audio-player';
 import { ResourceLimit } from '@/components/resource-limit';
 import { getAudio } from '@/services/queries/audios';
 
@@ -15,5 +16,10 @@ export default async function MiniStory({
     return <ResourceLimit />;
   }
 
-  return <PlayerContainer audioData={audio} />;
+  return (
+    <>
+      <TourAudioPlayer />
+      <PlayerContainer audioData={audio} />
+    </>
+  );
 }

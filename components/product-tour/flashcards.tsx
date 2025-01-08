@@ -9,41 +9,36 @@ export function TourFlashcard() {
       id: 1,
       title: 'Welcome!',
       description:
-        'Welcome to the flashcard tour, we will show you how to use flashcards to learn vocabulary.',
-      image:
-        'https://res.cloudinary.com/cloudinary-marketing/images/w_2000,h_1100/f_auto,q_auto/v1647045702/38_stock_photo_site/38_stock_photo_site-jpg?_i=AA',
+        'Learn how to use flashcards to build and strengthen your vocabulary with this guided tour.',
+      image: '/tour/flashcard-1.webp',
     },
     {
       id: 2,
-      title: 'Flip the flashcard',
+      title: 'Flashcard Details',
       description:
-        'You can click on the flip button to flip the flashcard. There are 3 sides of the flashcard.',
-      image:
-        'https://res.cloudinary.com/cloudinary-marketing/images/w_2000,h_1100/f_auto,q_auto/v1647045702/38_stock_photo_site/38_stock_photo_site-jpg?_i=AA',
+        'Each flashcard contains the word, pronunciation, meaning, and an example sentence to enhance your understanding.',
+      image: '/tour/flashcard-2.webp',
     },
     {
       id: 3,
-      title: 'Listen to the pronunciation',
+      title: 'Flip the Flashcard',
       description:
-        'You can click on the speaker button to hear the pronunciation of the word.',
-      image:
-        'https://res.cloudinary.com/cloudinary-marketing/images/w_2000,h_1100/f_auto,q_auto/v1647045702/38_stock_photo_site/38_stock_photo_site-jpg?_i=AA',
+        'Click the flip button to view all three sides of the flashcard, each containing unique information.',
+      image: '/tour/flashcard-3.webp',
     },
     {
       id: 4,
-      title: 'Main content of the flashcard',
+      title: 'Listen to Pronunciation',
       description:
-        'This is the main content of the flashcard. You can see the word, pronunciation, meaning and example.',
-      image:
-        'https://res.cloudinary.com/cloudinary-marketing/images/w_2000,h_1100/f_auto,q_auto/v1647045702/38_stock_photo_site/38_stock_photo_site-jpg?_i=AA',
+        'Tap the speaker icon to hear the correct pronunciation of the word. Repeat as many times as needed to practice.',
+      image: '/tour/flashcard-4.webp',
     },
     {
       id: 5,
-      title: 'Navigate to the other flashcards',
+      title: 'Navigate Through Flashcards',
       description:
-        'You can click on the next or back button to go to the next or previous flashcard.',
-      image:
-        'https://res.cloudinary.com/cloudinary-marketing/images/w_2000,h_1100/f_auto,q_auto/v1647045702/38_stock_photo_site/38_stock_photo_site-jpg?_i=AA',
+        'Use the next and back buttons to easily switch between flashcards.',
+      image: '/tour/flashcard-5.webp',
     },
   ];
 

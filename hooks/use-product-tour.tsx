@@ -51,7 +51,7 @@ export function useProductTour({
         }}
       >
         <DialogTitle className='hidden'></DialogTitle>
-        <div>
+        <div className='border-b border-b-zinc-200'>
           <Image
             src={data[currentPage].image}
             alt={data[currentPage].id.toString()}
