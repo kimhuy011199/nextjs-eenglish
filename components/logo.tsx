@@ -1,6 +1,6 @@
 import Link from 'next/link';
 
-export function Logo({ height = 48, isOpen = true }) {
+export function Logo({ height = 40, isOpen = true }) {
   const width = height * 4;
 
   return (

@@ -9,16 +9,16 @@ import { Logo } from '@/components/logo';
 export default function Home() {
   return (
     <>
-      <div className='px-8 pt-10 pb-4'>
-        <div className='flex flex-col items-center pb-8'>
+      <div className='md:px-8 md:pb-4 pt-8'>
+        <div className='flex flex-col items-center pb-6'>
           <Logo />
         </div>
-        <div className='px-8 py-12 w-full mx-auto flex flex-col justify-center items-center rounded-[32px] bg-zinc-100 border border-zinc-200'>
-          <div className='w-full p-8 max-w-2xl flex flex-col justify-center items-center gap-6'>
-            <h1 className='text-center text-5xl leading-tight font-semibold'>
+        <div className='px-6 md:px-8 py-10 w-full mx-auto flex flex-col justify-center items-center md:rounded-[32px] bg-zinc-100 border border-zinc-200'>
+          <div className='w-full pt-6 pb-2 md:px-5 lg:px-10 max-w-3xl flex flex-col justify-center items-center gap-6'>
+            <h1 className='text-center text-3xl md:text-[32px] lg:text-5xl leading-tight lg:leading-snug font-semibold'>
               Master English The Effortless Way
             </h1>
-            <p className='text-center text-zinc-500 text-lg'>
+            <p className='text-center text-zinc-500 text-base'>
               Practice story listening, expand your vocabulary, and build
               confidence with interactive exercises tailored to the Effortless
               English course.
@@ -26,9 +26,9 @@ export default function Home() {
             <Button asChild>
               <Link
                 href='/learn'
-                className='flex items-center gap-3 !h-12 !px-8 !rounded-xl group'
+                className='flex items-center gap-3 !h-12 !px-5 !rounded-xl group'
               >
-                <span className='text-lg'>Explore Lessons</span>
+                <span className='font-medium'>Explore Lessons</span>
                 <MoveRight
                   strokeWidth={3}
                   className='group-hover:translate-x-1 transition-all'
@@ -36,13 +36,15 @@ export default function Home() {
               </Link>
             </Button>
           </div>
-          <div className='w-full max-w-5xl mx-auto p-10 flex flex-col gap-10'>
-            <div className='bg-zinc-300 rounded-2xl w-full h-[500px]'></div>
+          <div className='w-full max-w-5xl mx-auto mt-8 lg:mt-0 lg:p-10 flex flex-col gap-10'>
+            <div className='overflow-hidden border border-zinc-200 rounded-lg shadow-xl'>
+              <Image src='/home.webp' alt='Hero' width={1920} height={500} />
+            </div>
           </div>
         </div>
-        <div className='w-full max-w-5xl mx-auto px-10 py-24 flex flex-col'>
+        <div className='w-full max-w-5xl mx-auto px-6 md:px-10 py-16 lg:py-24 flex flex-col overflow-hidden'>
           <div>
-            <h2 className='text-3xl font-semibold text-center mb-5'>
+            <h2 className='text-2xl md:text-[28px] font-semibold text-center mb-5'>
               Flashcard Vocabulary
             </h2>
             <p className='text-center w-full max-w-2xl mx-auto text-zinc-500'>
@@ -67,9 +69,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className='w-full max-w-5xl mx-auto px-10 py-20 flex flex-col'>
+        <div className='w-full max-w-5xl mx-auto px-6 md:px-10 py-12 md:py-16 !pt-6 flex flex-col'>
           <div>
-            <h2 className='text-3xl font-semibold text-center mb-5'>
+            <h2 className='text-2xl md:text-[28px] font-semibold text-center mb-5'>
               Practice Makes Perfect
             </h2>
             <p className='text-center w-full max-w-2xl mx-auto text-zinc-500'>

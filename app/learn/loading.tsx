@@ -6,7 +6,7 @@ export default function Loading() {
           <div className='h-12 w-32 rounded-lg animate-pulse bg-zinc-200' />
         </div>
         <div className='h-12 w-40 rounded-lg animate-pulse bg-zinc-200' />
-        <div className='h-12 w-[500px] rounded-lg animate-pulse bg-zinc-200 mt-5' />
+        <div className='h-12 w-full lg:w-[500px] rounded-lg animate-pulse bg-zinc-200 mt-5' />
       </div>
       <div className='flex flex-col gap-10'>
         <div className='grid grid-cols-1 gap-10 sm:grid-cols-3'>

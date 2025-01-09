@@ -20,7 +20,7 @@ export function FlashcardModal({ vocabulary }: { vocabulary: Vocabulary }) {
           <SwatchBook />
         </Button>
       </DialogTrigger>
-      <DialogContent className='min-w-[800px] rounded-3xl'>
+      <DialogContent className='lg:min-w-[800px] md:rounded-3xl'>
         <DialogHeader className='pb-2'>
           <DialogTitle>Flashcard</DialogTitle>
           <DialogDescription></DialogDescription>
