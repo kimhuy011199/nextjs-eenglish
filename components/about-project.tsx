@@ -50,7 +50,7 @@ export function AboutProject() {
               </a>
             </Button>
             <Button asChild variant={'outline'}>
-              <a href=''>My Porfolio</a>
+              <a href='https://huynk.dev'>My Porfolio</a>
             </Button>
           </div>
         </div>

@@ -97,7 +97,9 @@ export default function Home() {
         </div>
       </div>
       <div className='p-10 border-t border-t-zinc-200 flex justify-center items-center'>
-        <p className='text-center'>Footer</p>
+        <p className='text-center'>
+          Made with ❤️ by <span className='italic'>huynkdotdev</span>.
+        </p>
       </div>
     </>
   );
